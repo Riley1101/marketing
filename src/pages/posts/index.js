@@ -5,7 +5,7 @@ import Breadcrumb from "../../components/breadcrumb";
 import HeaderTwo from "../../components/header/header-2";
 import useProducts, { useProductQueries } from "@/query/products";
 import AllItems from "@/components/posts/all-items";
-function allItemsPage({ tags, categories }) {
+function allItemsPage({ tags, categories, suggests }) {
   const [limit, setLimit] = React.useState(6)
   const data = useProducts(limit);
   let loadMore = () => {
@@ -24,6 +24,7 @@ function allItemsPage({ tags, categories }) {
         posts={data}
         categories={categories}
         tags={tags}
+        suggests={suggests}
       />
 
     </Fragment>

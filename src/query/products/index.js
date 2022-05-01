@@ -11,6 +11,10 @@ const GET_FILTERS = gql`query Queries {
     categories{
         name
     }
+    suggests : products(last: 3) {
+        id
+        name
+    }
 }`
 export const useProductQueries = async (id) => {
     const data = await client.request(GET_FILTERS, { id: id });

@@ -10,6 +10,7 @@ function allItems(props) {
 
                     <div className='lg:col-span-4 max-md:pt-[50px]'>
                         <PostSidebar
+                            suggests={props.suggests}
                             categories={props.categories}
                             tags={props.tags}
                         />
