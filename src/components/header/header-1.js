@@ -30,16 +30,16 @@ function HeaderOne() {
     const headerCss = `flex lg:justify-between justify-end items-center`;
     return (
         <Fragment>
-            <header className='absolute w-full z-10'>
+            <header className='absolute z-10 w-full'>
                 <div className='sticky-holder header-section sticky-style-1'>
-                    <div className='custom-container container'>
+                    <div className='container custom-container'>
                         <div className='grid grid-cols-12 items-center leading-[120px]'>
-                            <div className='lg:col-span-2 col-span-6'>
+                            <div className='col-span-6 lg:col-span-2'>
                                 <WhiteLogo />
                             </div>
-                            <div className='lg:col-span-7 lg:block hidden'>
+                            <div className='hidden lg:col-span-7 lg:block'>
                                 <nav>
-                                    <ul className='main-menu text-white'>
+                                    <ul className='text-white main-menu'>
                                         <li
                                             className={
                                                 router.pathname == '/'
@@ -97,10 +97,10 @@ function HeaderOne() {
                                     </ul>
                                 </nav>
                             </div>
-                            <div className='lg:col-span-3 col-span-6'>
+                            <div className='col-span-6 lg:col-span-3'>
                                 <div className={`outer-box ${headerCss}`}>
                                     {/* incase localize */}
-                                    <ul className='language-list text-white'>
+                                    <ul className='text-white language-list'>
                                         {/* <li>
                                             <Link href='/'>END</Link>
                                         </li>
@@ -109,7 +109,7 @@ function HeaderOne() {
                                         </li> */}
                                     </ul>
                                     <div className='offcanvas-area '>
-                                        <div className='offcanvas block md:hidden'>
+                                        <div className='block offcanvas md:hidden'>
                                             <button
                                                 className='menu-bars flex text-white text-[24px]'
                                                 aria-label='Right Align'
@@ -160,7 +160,7 @@ function HeaderOne() {
                         </li>
                         {OffcanvasData.map((item, index) => {
                             return (
-                                <li key={index} className={item.cName}>
+                                <li key={item.path} className={item.cName}>
                                     <Link href={item.path}>
                                         <a>{item.title}</a>
                                     </Link>

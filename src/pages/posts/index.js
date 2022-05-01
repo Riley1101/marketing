@@ -6,7 +6,7 @@ import HeaderTwo from "../../components/header/header-2";
 import useProducts, { useProductQueries } from "@/query/products";
 import AllItems from "@/components/posts/all-items";
 function allItemsPage({ tags, categories, suggests }) {
-  const [limit, setLimit] = React.useState(6)
+  const [limit, setLimit] = React.useState(6);
   const data = useProducts(limit);
   let loadMore = () => {
     setLimit(limit + 6)

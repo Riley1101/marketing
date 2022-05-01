@@ -49,6 +49,7 @@ export const useProductDetail = async (id) => {
 
 
 const useProducts = (limit) => {
+
     const { data, error, isValidating } = useSWR(
         [`query GET_PRODUCTS($limit:Int!){
             products(first: $limit) {

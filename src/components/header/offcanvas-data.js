@@ -5,20 +5,17 @@ export const OffcanvasData = [
         cName: 'offcanvas-text',
     },
     {
+        title: 'Products',
+        path: '/posts',
+        cName: 'offcanvas-text',
+    },
+    {
         title: 'About',
         path: '/about',
         cName: 'offcanvas-text',
     },
-    {
-        title: 'Product',
-        path: '/projects',
-        cName: 'offcanvas-text',
-    },
-    {
-        title: 'Posts',
-        path: '/posts',
-        cName: 'offcanvas-text',
-    },
+
+
     {
         title: 'Contact',
         path: '/contact',
